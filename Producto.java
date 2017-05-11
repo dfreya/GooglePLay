@@ -11,11 +11,11 @@ public abstract class  Producto
 
     public Producto(String nombreAplicacion ){
         nombreProducto=nombreAplicacion;
-
     }
 
     protected String getId(){
         return nombreProducto;
     }
 
+    public abstract double getPrecio();
 }

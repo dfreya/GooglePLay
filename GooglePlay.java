@@ -24,7 +24,7 @@ public class GooglePlay
     }
 
     public int getNumeroUsuarios(){
-        return listaUsuarios.size();
+    return listaUsuarios.size();
     }
 
     public void addProducto(Producto producto){
@@ -33,6 +33,22 @@ public class GooglePlay
 
     public int getNumeroProductos(){
         return listaProductos.size();
+    }
+    
+    public double comprar(String nombreUsuario, String nombreProducto){
+        double cadena =-1;
+        for(int cont=0;cont<listaUsuarios.size();cont++){
+            if (nombreUsuario.equals(listaUsuarios.get(cont).getNombreCuenta())){
+                for(int cont2=0;cont2<listaProductos.size();cont2++){
+                    if(nombreProducto.equals(listaProductos.get(cont2).getId())){
+                        cadena=listaProductos.get(cont2).getPrecio();
+                        listaUsuarios.get(cont).addProductoComprado(listaProductos.get(cont2));
+                    }
+                }
+                
+            }
+        }
+        return cadena;
     }
 
 }

@@ -23,4 +23,10 @@ public class Libro extends ProductoMultimedia
     public boolean getFiccion(){
         return ficcicon;
     }
+
+    public  double getPrecio(){
+        double precio=0;
+        precio=(this.getNumeroPaginas()/100)*(this.getAno()- 2010);
+        return precio;
+    }
 }

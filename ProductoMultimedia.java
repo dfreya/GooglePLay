@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ProductoMultimedia extends Producto
+public abstract class ProductoMultimedia extends Producto
 {
     private int year;
     /**
@@ -24,4 +24,5 @@ public class ProductoMultimedia extends Producto
     public int getAno(){
         return year;
     }
+    public abstract double getPrecio();
 }

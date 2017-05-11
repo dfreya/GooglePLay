@@ -15,10 +15,11 @@ public class Pelicula extends ProductoMultimedia
         duracion=duracionEnMIn;
         calidad=estaFullHDONo;
     }
-    
+
     public int getDuracion(){
         return duracion;
     }
+
     public String getCalidad(){
         String cadena="";
         if (calidad==1080){
@@ -28,5 +29,19 @@ public class Pelicula extends ProductoMultimedia
             cadena="HD";
         }
         return cadena;
+    }
+
+    public  double getPrecio(){
+        double precio=0;
+        if(getCalidad().equals("FullHD")){
+            precio=10;
+        }
+        else{
+            precio=5;
+        }
+        if(getAno()<=2000){
+            precio=precio/2;
+        }
+        return precio;
     }
 }
